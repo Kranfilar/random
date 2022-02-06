@@ -1,4 +1,7 @@
 import 'package:fluent_ui/fluent_ui.dart';
+import 'package:random/views/weapons/havyWeapon.dart';
+import 'package:random/views/weapons/lowWeapon.dart';
+import 'package:random/views/weapons/pistol.dart';
 
 class WeaponPage extends StatefulWidget {
   const WeaponPage({Key? key}) : super(key: key);
@@ -12,7 +15,15 @@ class _WeaponPageState extends State<WeaponPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xFF2E3539),
+      decoration: BoxDecoration(
+        color: const Color(0xFF2E3539),
+        borderRadius: BorderRadius.circular(4),
+        image: DecorationImage(
+            image: NetworkImage(
+                'https://raw.githubusercontent.com/Kranfilar/random/main/assets/images/icons/valorant_glass.png'),
+            fit: BoxFit.none,
+            alignment: Alignment.center),
+      ),
       child: Padding(
         padding: EdgeInsets.only(top: 8, bottom: 64),
         child: Column(
@@ -64,7 +75,7 @@ class _WeaponPageState extends State<WeaponPage> {
                       Navigator.push(
                         context,
                         FluentPageRoute(
-                          builder: (context) => const WeaponPage(),
+                          builder: (context) => const PistolPage(),
                         ),
                       );
                     },
@@ -92,7 +103,7 @@ class _WeaponPageState extends State<WeaponPage> {
                       Navigator.push(
                         context,
                         FluentPageRoute(
-                          builder: (context) => const WeaponPage(),
+                          builder: (context) => const lowWeaponPage(),
                         ),
                       );
                     },
@@ -120,7 +131,7 @@ class _WeaponPageState extends State<WeaponPage> {
                       Navigator.push(
                         context,
                         FluentPageRoute(
-                          builder: (context) => const WeaponPage(),
+                          builder: (context) => const havyWeaponPage(),
                         ),
                       );
                     },

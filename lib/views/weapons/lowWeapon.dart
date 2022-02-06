@@ -3,22 +3,20 @@ import 'dart:math';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/gestures.dart';
 
-class PistolPage extends StatefulWidget {
-  const PistolPage({Key? key}) : super(key: key);
+class lowWeaponPage extends StatefulWidget {
+  const lowWeaponPage({Key? key}) : super(key: key);
 
   @override
-  _PistolPageState createState() => _PistolPageState();
+  _lowWeaponPageState createState() => _lowWeaponPageState();
 }
 
-class _PistolPageState extends State<PistolPage> {
+class _lowWeaponPageState extends State<lowWeaponPage> {
   final pageController = PageController(viewportFraction: 0.8, keepPage: true);
   var maps = [
-    'Faca',
-    'Classic',
-    'Shorty',
-    'Frenzy',
-    'Ghost',
-    'Sheriff',
+    'Stinger',
+    'Spectre',
+    'Marshal',
+    'Bucky',
   ];
 
   getImage(index) {

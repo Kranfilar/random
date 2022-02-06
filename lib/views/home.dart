@@ -18,7 +18,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xFF2E3539),
+      decoration: BoxDecoration(
+        color: const Color(0xFF2E3539),
+        borderRadius: BorderRadius.circular(4),
+        image: DecorationImage(
+            image: NetworkImage(
+                'https://raw.githubusercontent.com/Kranfilar/random/main/assets/images/icons/valorant_glass.png'),
+            fit: BoxFit.none,
+            alignment: Alignment.center),
+      ),
       child: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 128),
@@ -120,7 +128,7 @@ class _HomePageState extends State<HomePage> {
                       },
                     ),
                   ),
-                  Tooltip(
+/*****************Tooltip(
                     message: 'Sorteio de Modos',
                     child: Button(
                       style: ButtonStyle(
@@ -148,6 +156,7 @@ class _HomePageState extends State<HomePage> {
                       },
                     ),
                   ),
+*****************/
                 ],
               ),
             ],

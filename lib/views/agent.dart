@@ -62,7 +62,15 @@ class _AgentPageState extends State<AgentPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xFF2E3539),
+      decoration: BoxDecoration(
+        color: const Color(0xFF2E3539),
+        borderRadius: BorderRadius.circular(4),
+        image: DecorationImage(
+            image: NetworkImage(
+                'https://raw.githubusercontent.com/Kranfilar/random/main/assets/images/icons/valorant_glass.png'),
+            fit: BoxFit.none,
+            alignment: Alignment.center),
+      ),
       child: Padding(
         padding: const EdgeInsets.only(top: 8, bottom: 64),
         child: Column(
