@@ -3,6 +3,7 @@ import 'package:random/views/agent.dart';
 import 'package:random/views/map.dart';
 import 'package:random/views/mode.dart';
 import 'package:random/views/weapon.dart';
+import 'package:random/views/weapons/pistol.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
