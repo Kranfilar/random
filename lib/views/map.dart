@@ -31,7 +31,7 @@ class _MapPageState extends State<MapPage> {
     return mapURL;
   }
 
-  String result = "Sem resultado";
+  String result = "";
   randomia() {
     Random random = new Random();
     int randomNumber = random.nextInt(maps.length);

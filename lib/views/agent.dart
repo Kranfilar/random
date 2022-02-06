@@ -39,13 +39,21 @@ class _AgentPageState extends State<AgentPage> {
     return mapURL;
   }
 
-  String result = "Sem resultado";
-  randomia() {
-    Random random = new Random();
-    int randomNumber = random.nextInt(agents.length);
+  String primaryResult = "";
+  String secondaryResult = "";
+  primaryRandomia() {
+    Random primaryRandom = new Random();
+    int primaryRandomNumber = primaryRandom.nextInt(agents.length);
+    Random secondaryRandom = new Random();
+    int secondaryRandomNumber = primaryRandom.nextInt(agents.length);
+    while (secondaryRandomNumber == primaryRandomNumber) {
+      secondaryRandomNumber = primaryRandom.nextInt(agents.length);
+    }
     setState(() {
-      result = agents[randomNumber];
-      print(result);
+      primaryResult = agents[primaryRandomNumber];
+      print(primaryResult);
+      secondaryResult = agents[secondaryRandomNumber];
+      print(secondaryResult);
     });
   }
 
@@ -105,7 +113,7 @@ class _AgentPageState extends State<AgentPage> {
                           child: Text(
                             agents[index],
                             style: TextStyle(
-                                color: Colors.black,
+                                color: buttonColor,
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -114,19 +122,37 @@ class _AgentPageState extends State<AgentPage> {
                           borderRadius: BorderRadius.circular(4),
                           image: DecorationImage(
                               image: NetworkImage(getImage(index)),
-                              fit: BoxFit.fill,
+                              fit: BoxFit.fitWidth,
                               alignment: Alignment.topCenter),
                         ),
                       );
                     }),
               ),
             ),
-            Text(
-              result,
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 32),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  child: Text(
+                    primaryResult,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 32),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  child: Text(
+                    secondaryResult,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 32),
+                  ),
+                ),
+              ],
             ),
             Tooltip(
               message: 'Um mapa aleatório aparecerar ao clicar o botão',
@@ -145,7 +171,7 @@ class _AgentPageState extends State<AgentPage> {
                       color: Colors.white,
                     ),
                   ),
-                  onPressed: () => randomia()),
+                  onPressed: () => primaryRandomia()),
             ),
           ],
         ),
