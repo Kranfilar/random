@@ -13,6 +13,7 @@ class lowWeaponPage extends StatefulWidget {
 class _lowWeaponPageState extends State<lowWeaponPage> {
   final pageController = PageController(viewportFraction: 0.8, keepPage: true);
   var maps = [
+    'Faca',
     'Stinger',
     'Spectre',
     'Marshal',
