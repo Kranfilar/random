@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                 clipBehavior: Clip.none,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(5, 0, 5, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
                     child: Tooltip(
                       message: 'Sorteio de agentes',
                       child: Button(
@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(5, 0, 5, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
                   child: Tooltip(
                       message: 'Sorteio de armas',
                       child: Button(
@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(5, 0, 5, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
                     child: Tooltip(
                       message: 'Sorteio de Mapas',
                       child: Button(
