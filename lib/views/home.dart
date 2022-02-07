@@ -41,91 +41,107 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white,
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+              Wrap(
+                spacing: 0,
+                runSpacing: 0,
+                alignment: WrapAlignment.spaceBetween,
+                crossAxisAlignment: WrapCrossAlignment.center,
+                direction: Axis.horizontal,
+                runAlignment: WrapAlignment.spaceAround,
+                verticalDirection: VerticalDirection.down,
+                clipBehavior: Clip.none,
                 children: [
-                  Tooltip(
-                    message: 'Sorteio de agentes',
-                    child: Button(
-                      style: ButtonStyle(
-                        padding: ButtonState.all(
-                          const EdgeInsets.symmetric(
-                              horizontal: 48, vertical: 16),
-                        ),
-                        backgroundColor: ButtonState.all(buttonColor),
-                      ),
-                      child: const Text(
-                        'Agente',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                          color: Colors.white,
-                        ),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          FluentPageRoute(
-                            builder: (context) => const AgentPage(),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(5, 0, 5, 0),
+                    child: Tooltip(
+                      message: 'Sorteio de agentes',
+                      child: Button(
+                        style: ButtonStyle(
+                          padding: ButtonState.all(
+                            const EdgeInsets.symmetric(
+                                horizontal: 48, vertical: 16),
                           ),
-                        );
-                      },
+                          backgroundColor: ButtonState.all(buttonColor),
+                        ),
+                        child: const Text(
+                          'Agente',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            FluentPageRoute(
+                              builder: (context) => const AgentPage(),
+                            ),
+                          );
+                        },
+                      ),
                     ),
                   ),
-                  Tooltip(
-                    message: 'Sorteio de armas',
-                    child: Button(
-                      style: ButtonStyle(
-                        padding: ButtonState.all(
-                          const EdgeInsets.symmetric(
-                              horizontal: 48, vertical: 16),
-                        ),
-                        backgroundColor: ButtonState.all(buttonColor),
-                      ),
-                      child: const Text(
-                        'Arma',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                          color: Colors.white,
-                        ),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          FluentPageRoute(
-                            builder: (context) => const WeaponPage(),
+                  Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(5, 0, 5, 0),
+                  child: Tooltip(
+                      message: 'Sorteio de armas',
+                      child: Button(
+                        style: ButtonStyle(
+                          padding: ButtonState.all(
+                            const EdgeInsets.symmetric(
+                                horizontal: 48, vertical: 16),
                           ),
-                        );
-                      },
+                          backgroundColor: ButtonState.all(buttonColor),
+                        ),
+                        child: const Text(
+                          'Arma',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            FluentPageRoute(
+                              builder: (context) => const WeaponPage(),
+                            ),
+                          );
+                        },
+                      ),
                     ),
                   ),
-                  Tooltip(
-                    message: 'Sorteio de Mapas',
-                    child: Button(
-                      style: ButtonStyle(
-                        padding: ButtonState.all(
-                          const EdgeInsets.symmetric(
-                              horizontal: 48, vertical: 16),
-                        ),
-                        backgroundColor: ButtonState.all(buttonColor),
-                      ),
-                      child: const Text(
-                        'Mapa',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                          color: Colors.white,
-                        ),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          FluentPageRoute(
-                            builder: (context) => MapPage(),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(5, 0, 5, 0),
+                    child: Tooltip(
+                      message: 'Sorteio de Mapas',
+                      child: Button(
+                        style: ButtonStyle(
+                          padding: ButtonState.all(
+                            const EdgeInsets.symmetric(
+                                horizontal: 48, vertical: 16),
                           ),
-                        );
-                      },
+                          backgroundColor: ButtonState.all(buttonColor),
+                        ),
+                        child: const Text(
+                          'Mapa',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            FluentPageRoute(
+                              builder: (context) => MapPage(),
+                            ),
+                          );
+                        },
+                      ),
                     ),
                   ),
 /*****************Tooltip(
