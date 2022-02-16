@@ -81,6 +81,20 @@ class _VariousDiscsState extends State<VariousDiscs> {
       }),
       child: Stack(
         children: [
+          Tooltip(
+            message: 'Voltar à tela inicial',
+            child: IconButton(
+              style: ButtonStyle(
+                backgroundColor: ButtonState.all(buttonColor),
+              ),
+              icon: Icon(
+                FluentIcons.page_left,
+                color: Colors.white,
+                size: 24,
+              ),
+              onPressed: () => {Navigator.pop(context)},
+            ),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
