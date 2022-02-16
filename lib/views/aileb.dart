@@ -31,7 +31,7 @@ class AilebPage extends StatefulWidget {
 }
 
 class _AilebPageState extends State<AilebPage> {
-  Color buttonColor = Color(0xFF7DC3EC);
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,13 +70,12 @@ class _VariousDiscsState extends State<VariousDiscs> {
       _discs.add(DiscData());
     }
   }
-
+  Color buttonColor = Color(0xFF7DC3EC);
   int score = 0;
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
       color: Color(0xFF0F1923),
-      focusColor: Colors.amber,
       onPressed: () => setState(() {
         _makeDiscs();
         score > 0 ? score-- : score;
