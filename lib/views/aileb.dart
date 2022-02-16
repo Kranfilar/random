@@ -85,11 +85,8 @@ class _VariousDiscsState extends State<VariousDiscs> {
           Tooltip(
             message: 'Voltar à tela inicial',
             child: IconButton(
-              style: ButtonStyle(
-                backgroundColor: ButtonState.all(buttonColor),
-              ),
               icon: Icon(
-                FluentIcons.page_left,
+                Icons.arrow_left,
                 color: Colors.white,
                 size: 24,
               ),
