@@ -31,6 +31,7 @@ class AilebPage extends StatefulWidget {
 }
 
 class _AilebPageState extends State<AilebPage> {
+  Color buttonColor = Color(0xFF7DC3EC);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
