@@ -1,6 +1,6 @@
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:random/views/agent.dart';
-import 'package:random/views/map.dart';
+import 'package:random/views/aileb.dart';
 import 'package:random/views/mode.dart';
 import 'package:random/views/weapon.dart';
 import 'package:random/views/weapons/pistol.dart';
@@ -126,7 +126,7 @@ class _HomePageState extends State<HomePage> {
                           backgroundColor: ButtonState.all(buttonColor),
                         ),
                         child: const Text(
-                          'Mapa',
+                          'Ai leb',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
@@ -137,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.push(
                             context,
                             FluentPageRoute(
-                              builder: (context) => MapPage(),
+                              builder: (context) => AilebPage(),
                             ),
                           );
                         },
