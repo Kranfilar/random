@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:fluent_ui/fluent_ui.dart';
 
 class DiscData {
   static final _rng = Random();
