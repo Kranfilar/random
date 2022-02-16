@@ -100,7 +100,7 @@ class _VariousDiscsState extends State<VariousDiscs> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Ai lab',
+                    'Ai leb',
                     style: TextStyle(color: Colors.white, fontSize: 50),
                   ),
                   Text(
