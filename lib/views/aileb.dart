@@ -10,7 +10,7 @@ class DiscData {
   final Alignment alignment;
 
   DiscData()
-      : size = _rng.nextDouble() * 80 + 32,
+      : size = _rng.nextDouble() * 80 + 64,
         color = Color.fromARGB(
           200,
           _rng.nextInt(255),
