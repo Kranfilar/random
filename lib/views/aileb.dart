@@ -78,7 +78,8 @@ class _VariousDiscsState extends State<VariousDiscs> {
       color: Color(0xFF0F1923),
       onPressed: () => setState(() {
         _makeDiscs();
-        score > 0 ? score-- : score;
+        score -= 10;
+        score <= 0 ? score = 0 : score;
       }),
       child: Stack(
         children: [
