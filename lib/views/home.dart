@@ -85,8 +85,7 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
                   child: Tooltip(
-                      message: 'Sorteio de armas',
-                      child: Button(
+                      message: 'Mapa'
                         style: ButtonStyle(
                           padding: ButtonState.all(
                             const EdgeInsets.symmetric(
@@ -95,7 +94,7 @@ class _HomePageState extends State<HomePage> {
                           backgroundColor: ButtonState.all(buttonColor),
                         ),
                         child: const Text(
-                          'Arma',
+                          'Mapas',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
@@ -106,7 +105,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.push(
                             context,
                             FluentPageRoute(
-                              builder: (context) => const WeaponPage(),
+                              builder: (context) => const MapPage(),
                             ),
                           );
                         },
@@ -116,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
                     child: Tooltip(
-                      message: 'Sorteio de Mapas',
+                      message: 'Ai leb',
                       child: Button(
                         style: ButtonStyle(
                           padding: ButtonState.all(
